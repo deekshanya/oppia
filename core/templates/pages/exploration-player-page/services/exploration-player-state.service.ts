@@ -174,7 +174,7 @@ angular.module('oppia').factory('ExplorationPlayerStateService', [
           explorationId);
       $q.all([
         explorationDataPromise,
-        PretestQuestionBackendApiService.fetchPretestQuestions(
+        PretestQuestionBackendApiService.fetchPretestQuestionsAsync(
           explorationId, storyUrlFragment),
         ExplorationFeaturesBackendApiService.fetchExplorationFeatures(
           explorationId),

@@ -95,7 +95,7 @@ angular.module('oppia').factory('QuestionsListService', [
         }
         if ((_currentPage + 1) * num > _questionSummariesForOneSkill.length &&
             _nextCursorForQuestions !== null && fetchMore) {
-          QuestionBackendApiService.fetchQuestionSummaries(
+          QuestionBackendApiService.fetchQuestionSummariesAsync(
             skillIds, _nextCursorForQuestions).then(
             function(returnObject) {
               if (skillIds.length === 1) {

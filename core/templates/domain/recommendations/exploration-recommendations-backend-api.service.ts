@@ -52,7 +52,7 @@ export class ExplorationRecommendationsBackendApiService {
     private learnerExplorationSummaryObjectFactory:
     LearnerExplorationSummaryObjectFactory) { }
 
-  getRecommendedSummaryDicts(
+  async getRecommendedSummaryDictsAsync(
       authorRecommendedExpIds: string[],
       includeSystemRecommendations: string,
       collectionId: string, storyId: string, currentNodeId: string,
